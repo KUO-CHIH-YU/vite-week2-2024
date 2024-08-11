@@ -1,9 +1,10 @@
-import { createRouter, createWebHistory } from 'vue-router'
+// import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import Week2 from '../views/week2.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  // history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(),
   routes: [
     {
       path: '/',
@@ -21,18 +22,12 @@ const router = createRouter({
     {
       path: '/week1',
       name: 'week1',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/week1.vue')
     },
     {
       path: '/week2',
       name: 'week2',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: Week2
+      component: () => import('../views/week2.vue')
     }
   ]
 })
