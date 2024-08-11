@@ -48,9 +48,9 @@ import { ref, onMounted } from 'vue'
 import axios from 'axios'
 const url = 'https://todolist-api.hexschool.io'
 
-const SingUpemail = ref('abc123@gmail.com')
-const SingUppwd = ref('Asdf1234')
-const nickname = ref('Asdf1234')
+const SingUpemail = ref('')
+const SingUppwd = ref('')
+const nickname = ref('')
 let uid = ref('')
 const messageSignUp = ref('')
 
@@ -68,8 +68,8 @@ const singUp = async () => {
   }
 }
 
-const SingInemail = ref('abc123@gmail.com')
-const SingInpwd = ref('Asdf1234')
+const SingInemail = ref('')
+const SingInpwd = ref('')
 const messageSignIn = ref('')
 const token = ref('')
 const verify = ref(false)
